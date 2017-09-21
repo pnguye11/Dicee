@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -25,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("Dice", "button as been pressed");
+
+                Random randomNumberGenerator = new Random ();
+
+                int number = randomNumberGenerator.nextInt(6);
+                Log.d("Dice", "The random number is: " + number);
             }
         });
 
